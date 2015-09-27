@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D1CA7BF1B7885D100B81875 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CA7BE1B7885D100B81875 /* main.swift */; };
+		4D82F3F11B865EE8000EF453 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82F3EF1B865EE8000EF453 /* main.swift */; };
+		4D82F3F21B865EE8000EF453 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82F3F01B865EE8000EF453 /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		4D1CA7BB1B7885D000B81875 /* blackjack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = blackjack; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D1CA7BE1B7885D100B81875 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4D82F3EF1B865EE8000EF453 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4D82F3F01B865EE8000EF453 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 		4D1CA7BD1B7885D000B81875 /* blackjack */ = {
 			isa = PBXGroup;
 			children = (
-				4D1CA7BE1B7885D100B81875 /* main.swift */,
+				4D82F3EF1B865EE8000EF453 /* main.swift */,
+				4D82F3F01B865EE8000EF453 /* model.swift */,
 			);
 			path = blackjack;
 			sourceTree = "<group>";
@@ -88,6 +91,7 @@
 		4D1CA7B31B7885D000B81875 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = dblee;
 				TargetAttributes = {
@@ -118,7 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1CA7BF1B7885D100B81875 /* main.swift in Sources */,
+				4D82F3F11B865EE8000EF453 /* main.swift in Sources */,
+				4D82F3F21B865EE8000EF453 /* model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +211,21 @@
 		4D1CA7C31B7885D100B81875 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blackjack/blackjack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4D1CA7C41B7885D100B81875 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blackjack/blackjack-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -236,6 +248,7 @@
 				4D1CA7C41B7885D100B81875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
